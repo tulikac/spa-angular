@@ -34,8 +34,13 @@ npm start -- --configuration production --host 127.0.0.1 --port 8080
 ## Builder Apps configuration
 
 The root `builder.yaml` declares one public Node.js static component. Builder
-Apps runs the standard Angular production build and publishes the generated
-browser output from `dist/spa-angular/browser`.
+Apps runs a customer-owned build command that installs the locked dependencies,
+runs the standard Angular production build, and copies the generated browser
+output beneath `$DESTINATION_DIR`. The published output is
+`dist/spa-angular/browser`.
+
+The dependency-install step is required because Oryx does not run its normal
+installation sequence when `builder.yaml` supplies an explicit `build` command.
 
 ## Routes
 
