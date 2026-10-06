@@ -1,0 +1,7 @@
+components:
+  - name: site
+    role: static
+    platform: nodejs
+    build: npm run build
+    output: dist/spa-angular/browser
+    path: /

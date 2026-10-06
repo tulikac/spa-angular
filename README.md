@@ -31,6 +31,12 @@ npm start -- --configuration production --host 127.0.0.1 --port 8080
 .\scripts\verify.ps1 -BaseUrl http://localhost:8080
 ```
 
+## Builder Apps configuration
+
+The root `builder.yaml` declares one public Node.js static component. Builder
+Apps runs the standard Angular production build and publishes the generated
+browser output from `dist/spa-angular/browser`.
+
 ## Routes
 
 | Route | Purpose |
